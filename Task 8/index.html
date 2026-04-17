@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="changeColor">Click Me</button>
+    <p id="colorCode"></p>
+    <script>
+        document.getElementById("changeColor").addEventListener("click", changeColor);
+        function changeColor() {
+            let color = Math.random() * 16777215
+            document.body.style.backgroundColor = "#" + Math.floor(color)
+            document.getElementById("colorCode").innerText = "#" + Math.floor(color).toString(16)
+        }
+    </script>
+</body>
+
+</html>
